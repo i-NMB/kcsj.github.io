@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
+
+
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            STL 线性结构 | 
+        
+        《课程设计》笔记
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.svg">
+    <link rel="icon" href="/img/favicon.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="这是搭建于2022-05-21的博客，为了记录《课程设计》的笔记">
+    <meta name="keywords" content=",线性结构">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?g9kbnVMhK1OGvatSXgHvhw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: ;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="《课程设计》笔记">
+    <meta name="msapplication-starturl" content="https://kcsj.i-nmb.cn/STL-linear-structure.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="《课程设计》笔记">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://kcsj.i-nmb.cn/STL-linear-structure.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="STL 线性结构 | 《课程设计》笔记">
+    <meta property="og:image" content="/img/favicon.svg">
+    <meta property="og:description" content="这是搭建于2022-05-21的博客，为了记录《课程设计》的笔记">
+    <meta property="og:article:tag" content="线性结构"> 
+
+    
+        <meta property="article:published_time" content="Sun May 22 2022 12:55:33 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 22 2022 20:43:49 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://kcsj.i-nmb.cn/STL-linear-structure.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://kcsj.i-nmb.cn/STL-linear-structure.html",
+    "headline": "STL 线性结构",
+    "datePublished": "Sun May 22 2022 12:55:33 GMT+0800",
+    "dateModified": "Sun May 22 2022 20:43:49 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "i囡漫笔",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "嗨，很高兴见到你"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "《课程设计》笔记",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",线性结构",
+    "description": "这是搭建于2022-05-21的博客，为了记录《课程设计》的笔记",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%E5%BC%95%E5%85%A5"><span class="post-toc-number">1.</span> <span class="post-toc-text">问题引入</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%88%86%E6%9E%90%E9%97%AE%E9%A2%98"><span class="post-toc-number">2.</span> <span class="post-toc-text">分析问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="post-toc-number">3.</span> <span class="post-toc-text">解决方案</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%95%B4%E6%95%B0"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">整数</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88"><span class="post-toc-number">4.</span> <span class="post-toc-text">实现方案</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E4%BD%BF%E7%94%A8stack%E3%80%90%E6%A0%88%E3%80%91%E8%BE%93%E5%87%BA"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">一、使用stack【栈】输出</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BC%98%E5%8C%96"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">优化</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%BF%E7%94%A8list%E3%80%90%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E3%80%91%E8%BE%93%E5%87%BA"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">二、使用list【链式存储】输出</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1%EF%BC%89%E4%BD%BF%E7%94%A8r-push-back-n-2-%E5%8A%A0%E4%B8%8Areverse"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">1）使用r.push_back(n%2);加上reverse</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2%EF%BC%89%E4%BD%BF%E7%94%A8r-push-back-n-2-%E5%88%A9%E7%94%A8%E5%B1%9E%E6%80%A7%E6%94%B9%E4%B8%BArbigin%EF%BC%8Crend"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">2）使用r.push_back(n%2);利用属性改为rbigin，rend</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3%EF%BC%89%E4%BD%BF%E7%94%A8r-push-front-n-2"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">3）使用r.push_front(n%2);</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81vector%E3%80%90%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%EF%BC%8C%E6%95%B0%E7%BB%84%E3%80%91%E8%BE%93%E5%87%BA"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">三、vector【顺序存储，数组】输出</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97deque%E3%80%90deque-%E6%98%AF-double-ended-queue-%E7%9A%84%E7%BC%A9%E5%86%99%EF%BC%8C%E5%8F%88%E7%A7%B0%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97%E5%AE%B9%E5%99%A8%E3%80%82%E3%80%91"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">四、双端队列deque【deque 是 double-ended queue 的缩写，又称双端队列容器。】</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.webp');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                STL 线性结构
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>i囡漫笔</strong>
+        <span>5月 22, 2022</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" rel="tag">线性结构</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=STL 线性结构&url=https://kcsj.i-nmb.cn/STL-linear-structure.html&pic=https://kcsj.i-nmb.cn/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=《课程设计》笔记&title=STL 线性结构&summary=这是搭建于2022-05-21的博客，为了记录《课程设计》的笔记&pics=https://kcsj.i-nmb.cn/img/favicon.svg&url=https://kcsj.i-nmb.cn/STL-linear-structure.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>如果写c++程序那么STL容器是不可避免要使用的，而正确合理地使用这些容器才能够简化我们的程序、提高运行的效率，所以本篇根据2022-05-22《数据结构课程设计》来记录 STL线性结构 笔记</p>
+<h2 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h2><p>如何输出6的二进制数？</p>
+<h2 id="分析问题"><a href="#分析问题" class="headerlink" title="分析问题"></a>分析问题</h2><p><strong>问题-&gt;解决方案-&gt;实现方案-&gt;编写</strong></p>
+<p>即</p>
+<p>从问题得到解决方案（解决方案（具体步骤（过程可以问专业专家）））</p>
+<p>实现方案有哪几种方法，并进行优化</p>
+<p>编写代码</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><p><strong>十进制整数转换为二进制整数采用”除2取余，逆序排列”法。</strong></p>
+<p>具体做法是：用2整除十进制整数，可以得到一个商和余数；再用2去除商，又会得到一个商和余数，如此进行，直到商为小于1时为止，然后把先得到的余数作为二进制数的低位有效位，后得到的余数作为二进制数的高位有效位，依次排列起来。</p>
+<h2 id="实现方案"><a href="#实现方案" class="headerlink" title="实现方案"></a>实现方案</h2><h3 id="一、使用stack【栈】输出"><a href="#一、使用stack【栈】输出" class="headerlink" title="一、使用stack【栈】输出"></a>一、使用stack【栈】输出</h3><p>因为 <u>将得到的余数作为二进制数的高位有效位依次排列起来</u> 的过程需要后进先出，所以我们使用栈进行输出</p>
+<p>老师给出代码如下</p>
+<pre><code class="c++">#include&lt;cstdio&gt;
+#include&lt;list&gt;
+#include&lt;stack&gt;
+main()&#123;
+    std::list&lt;int&gt; q; //定义（双向）链表（被除数q） 			#include&lt;list&gt;
+    std::stack&lt;int&gt; r;//定义栈（余数r）					#include&lt;stack&gt;
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    while(n!=0)&#123;
+        q.push_back(n/2);	//push_back链表的后面插入  
+        r.push(n%2); 		//push余数压入栈 
+        n=n/2;
+    &#125; 
+    while(!r.empty())&#123;	// empty()只返回真假值，栈空返回1，否则返回0 
+    printf(&quot;%d&quot;,r.top());//top有返回值，而pop没有返回值 ，//用stack倒叙输出 
+    r.pop();		
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<p>其中<code>std::list&lt;int&gt; q;</code> 定义（双向）<strong>链表</strong> 来记录<u>商q</u>；<code>std::stack&lt;int&gt; r</code> 定义 <strong>栈</strong> 来记录<u>余数r</u>，定义n来表示操作数（要变为2进制的数）</p>
+<p>利用循环1来“压进”处理的数据：将<strong>商</strong>压进 链表的后面（<code>q.push_back(n/2)</code>）；将余数 压入栈 <code>r.push(n%2);</code> ；随后将n&#x2F;2向下取整（int型）</p>
+<pre><code class="c++">while(n!=0)&#123;
+        q.push_back(n/2);	//push_back链表的后面插入  
+        r.push(n%2); 		//push余数压入栈 
+        n=n/2;
+&#125; 
+</code></pre>
+<p>利用循环2来输出：将 压入栈 <code>r.push(n%2);</code>  的元素从栈顶输出<code>printf(&quot;%d&quot;,r.top());</code>随后销毁栈顶元素[目的是为了让下一个元素输出]<code>r.pop();</code></p>
+<pre><code class="c++">while(!r.empty())&#123;	// empty()只返回真假值，栈空返回1，否则返回0 
+    printf(&quot;%d&quot;,r.top());//top有返回值，而pop没有返回值 ，//用stack倒叙输出 
+    r.pop();		
+&#125;
+</code></pre>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>我们发现，在输出时候，我们并没有输出双向链表<code>std::list&lt;int&gt; q;</code>，</p>
+<p>所以我们可以判断，双向链表是多余的，需要优化（但是思考实现方案的时候不能不考虑到双向链表）</p>
+<p>我们把list相关代码删除（或注释）</p>
+<p>得到</p>
+<pre><code class="c++">#include&lt;cstdio&gt;
+//#include&lt;list&gt;
+#include&lt;stack&gt;
+main()&#123;
+//	std::list&lt;int&gt; q; //定义（双向）链表（被除数q） 	#include&lt;list&gt;
+    std::stack&lt;int&gt; r;//定义栈（余数r）					#include&lt;stack&gt;
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    while(n!=0)&#123;
+    //	q.push_back(n/2);商（不用输出）	//push_back链表的后面插入  
+        r.push(n%2); 		//push余数压入栈 
+        n=n/2;
+    &#125; 
+    while(!r.empty())&#123;	// empty()只返回真假值，栈空返回1，否则返回0 
+    printf(&quot;%d&quot;,r.top());//top有返回值，而pop没有返回值 ，//用stack倒叙输出 
+    r.pop();		
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<h3 id="二、使用list【链式存储】输出"><a href="#二、使用list【链式存储】输出" class="headerlink" title="二、使用list【链式存储】输出"></a>二、使用list【链式存储】输出</h3><p>具有三种实现list输出方案：</p>
+<h4 id="1）使用r-push-back-n-2-加上reverse"><a href="#1）使用r-push-back-n-2-加上reverse" class="headerlink" title="1）使用r.push_back(n%2);加上reverse"></a>1）使用r.push_back(n%2);加上reverse</h4><p>因为 <u>将得到的余数作为二进制数的高位有效位依次排列起来</u> 的过程需要后进先出，若我们需要使用list【链式存储】输出，要先将链式存储的顺序进行交换</p>
+<p>那么我们需要用到的是reverse函数，具体代码如下</p>
+<pre><code class="c++">#include&lt;cstdio&gt;
+#include&lt;list&gt;
+main()&#123;
+    std::list&lt;int&gt; r;
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    while(n!=0)&#123;	 
+        r.push_back(n%2);
+        n=n/2;
+    &#125; 
+    
+
+    reverse(r.begin(),r.end());//【或者】r.reverse;
+    //auto *i;auto:自动类型推倒//std::list&lt;int&gt;::iterator ;
+    for(auto i=r.begin();i!=r.end();++i)
+        printf(&quot;%d&quot;,*i) ;
+    return 0;
+
+&#125;
+</code></pre>
+<p>其中<code>reverse(r.begin(),r.end());</code>为交换顺序函数，将链表排序颠倒（1,2,3-&gt;3,2,1）</p>
+<p>在输出时，我们要用到类似指针的<code>i</code>，但是它的类型我们并不知道（或者不想写），那么我们使用<code>auto i</code>，让编译器自动识别</p>
+<blockquote>
+<p>不过在使用时需要如下配置</p>
+<p><img src="https://img1.i-nmb.cn/img/image-20220522134832991.png" alt="编译时加入以下命令"></p>
+</blockquote>
+<h4 id="2）使用r-push-back-n-2-利用属性改为rbigin，rend"><a href="#2）使用r-push-back-n-2-利用属性改为rbigin，rend" class="headerlink" title="2）使用r.push_back(n%2);利用属性改为rbigin，rend"></a>2）使用r.push_back(n%2);利用属性改为rbigin，rend</h4><p>利用双向链表的属性，我们可以重后往前输出</p>
+<p><strong>注意</strong>：双向链表不是数列，不能将上述<code>for(auto i=r.begin();i!=r.end();++i)</code>用<code>for(auto i=r.end();i!=r.begin();i--)</code>，而是要将<code>r.begin()</code>改为<code>r.rbegin</code>，<code>r.end</code>改为<code>r.rend</code>,即改为<code>for(auto i=r.rbegin();i!=r.rend();++i)</code></p>
+<p>具体代码如下</p>
+<pre><code class="c++">#include&lt;cstdio&gt;
+#include&lt;list&gt;
+main()&#123;
+    std::list&lt;int&gt; r;
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    while(n!=0)&#123;	 
+        r.push_back(n%2); 		
+        n=n/2;
+    &#125; 
+
+    //auto *i;auto:自动类型推倒//std::list&lt;int&gt;::iterator ;
+
+    for(auto i=r.rbegin();i!=r.rend();++i)// begin变成rbegin， end改为rend，双向链表从后向前读取 
+    printf(&quot;%d&quot;,*i) ;
+    return 0;
+
+&#125;
+</code></pre>
+<h4 id="3）使用r-push-front-n-2"><a href="#3）使用r-push-front-n-2" class="headerlink" title="3）使用r.push_front(n%2);"></a>3）使用r.push_front(n%2);</h4><p><u>将得到的余数作为二进制数的高位有效位依次排列起来</u> 的过程需要后进先出，我们还可以在插入时从链表头插入<code>r.push_front(n%2)</code></p>
+<pre><code class="c++">#include&lt;cstdio&gt;
+#include&lt;list&gt;
+main()&#123;
+    std::list&lt;int&gt; r;
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    while(n!=0)&#123;	 
+        push_front(n%2);		// push_front(n%2)（从前插入）顺序等于reverse(r.begin(),r.end())【或者】;数序颠倒，1,2,3-&gt;3,2,1 ,
+        n=n/2;
+    &#125; 
+    for(auto i=r.begin();i!=r.end();++i)
+    printf(&quot;%d&quot;,*i) ;
+    return 0;
+
+&#125;
+</code></pre>
+<h3 id="三、vector【顺序存储，数组】输出"><a href="#三、vector【顺序存储，数组】输出" class="headerlink" title="三、vector【顺序存储，数组】输出"></a>三、vector【顺序存储，数组】输出</h3><p>同使用list【链式存储】输出一样，我们可以</p>
+<p><strong>1）使用r.push_back(n%2);加上reverse</strong></p>
+<p>方法同list，只不过将list替换为vector</p>
+<p><strong>2）使用r.push_back(n%2);利用属性改为rbigin，rend</strong></p>
+<p>方法同list，只不过将list替换为vector</p>
+<p>但是我们<u>不能使用<code>r.push_front(n%2);</code></u> ，因为vector作为顺序存储（数组），不能从头输入，只能从尾输入。即没有<code>r.push_front()</code></p>
+<p><strong>vector具有数组特性，我们可以使用数组的方法进行输出</strong> <strong>（不建议）</strong></p>
+<p>即使用</p>
+<pre><code class="c++">for(int i=r.size();i&gt;0;--i)
+        printf(&quot;%d&quot;,r[i]) ;
+</code></pre>
+<p>得到：</p>
+<pre><code class="c++">#include&lt;cstdio&gt;
+#include&lt;vector&gt;
+main()&#123;
+    std::vector&lt;int&gt; r;
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    while(n!=0)&#123;	 
+        r.push_back(n%2); 		
+        n=n/2;
+    &#125;
+
+    for(int i=r.size();i&gt;0;--i)
+        printf(&quot;%d&quot;,r[i]) ;			//数组从r[max]输出到r[1](r[0]为空)
+    return 0;
+
+&#125;
+</code></pre>
+<h3 id="四、双端队列deque【deque-是-double-ended-queue-的缩写，又称双端队列容器。】"><a href="#四、双端队列deque【deque-是-double-ended-queue-的缩写，又称双端队列容器。】" class="headerlink" title="四、双端队列deque【deque 是 double-ended queue 的缩写，又称双端队列容器。】"></a>四、双端队列deque【deque 是 double-ended queue 的缩写，又称双端队列容器。】</h3><p>和 vector 不同的是，deque 还擅长在序列头部添加或删除元素</p>
+<p>deque的内存模型相比于vector与list要复杂许多，它不像vector 把所有的对象保存在一块连续的内存块，而是采用多个连续的存储块，并且在一个映射结构中保存对这些块及其顺序的跟踪。向deque 两端添加或删除元素的开销很小，它不需要重新分配空间。</p>
+<p>具体模型见下图：</p>
+<p><img src="https://img1.i-nmb.cn/img/image-20220522141449464.png" alt="image-20220522141449464"></p>
+<p>他能支持上述所有方式：</p>
+<p><strong>1）使用r.push_back(n%2);加上reverse</strong></p>
+<p><strong>2）使用r.push_back(n%2);利用属性改为rbigin，rend</strong></p>
+<p><strong>3）使用r.push_front(n%2);</strong> </p>
+<p><strong>4）具有数组特性，可以使用数组的方法进行输出</strong> <strong>（不建议）</strong></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <strong>本文作者：</strong>i囡漫笔<br><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank" data-pjax-state="">BY-NC-SA</a> 许可协议。转载请注明出处！
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://kcsj.i-nmb.cn/STL-linear-structure.html">https://kcsj.i-nmb.cn/STL-linear-structure.html</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style='padding:10px;' class="vcomment"></div>
+<script src="https://i-nmb.cn/js1/av-min.js"></script>
+<script src="https://i-nmb.cn/js1/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'true' === 'true';
+    var verify = 'false' === 'true';
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "oug3enFNoC6k3arNOk6vLs5Q-gzGzoHsz",
+        appKey: "spCAjUep1r61kvD6srH0BCoy",
+        placeholder: "快来评论叭",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'zh-cn',
+        guest_info: guest_info
+    });
+</script>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/example.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/hello-world.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="i囡漫笔's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        inmb@foxmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: inmb@foxmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2022/05/">五月 2022<span class="sidebar_archives-count">5</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "i囡漫笔"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://i-nmb.cn"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            i囡漫笔主页
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+	<a href="https://math.i-nmb.cn"  class="sidebar-footer-text-a" target="_blank">
+	    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+	        数学笔记
+	        <span class="sidebar-badge badge-circle">M</span>
+	    </div>
+	</a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/iNMB" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/503370112?spm_id_from=333.1007.0.0" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;《课程设计》笔记
+            
+                <br>
+                
+                    <a target="_blank" href="https://beian.miit.gov.cn" rel="nofollow noopener" style="font-size:10px;text-decoration:none;">闽 ICP 备 2022005733 号</a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35048102000072" rel="nofollow noopener" style="font-size:10px;text-decoration:none;"><br>闽公网安备35048102000072号</a>
+                
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">由 <a href="https://i-nmb.cn" target="_blank" class="footer-develop-a">i囡漫笔</a> 修改与修复</div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2022;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

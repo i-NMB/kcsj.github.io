@@ -1,0 +1,18 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="514" width="514" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#fff" transform="rotate(-90 255.99998474121097,255.99998474121097) " id="svg_2" d="m4.49997,255.99999l107.78573,-231.49999l287.4286,0l107.7857,231.49999l-107.7857,231.49999l-287.4286,0l-107.78573,-231.49999z" stroke-width="1.5" fill="#000"/>
+  <text stroke="#fff" transform="rotate(2.503326416015625 286.1604614257812,259.30526733398375) matrix(9.641739845275879,0,0,5.470151901245116,-1942.7565192989387,-817.3136992908045) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_3" y="205.109375" x="224.5" stroke-width="0" fill="#000000"/>
+  <text font-weight="normal" stroke="#000000" transform="matrix(8.514245966620305,0,0,4.373129124093138,-1911.4841584876306,-470.5821639341056) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="101" id="svg_4" y="204.872472" x="233.557937" stroke-width="0" fill="#fff">i</text>
+  <text font-weight="bold" stroke="#000000" transform="matrix(8.415183129828282,0,0,5.42399192218294,-1744.5745495472129,-627.9802084314376) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="101" id="svg_6" y="185.240057" x="230.11413" stroke-width="0" fill="#fff">-</text>
+  <text font-weight="bold" stroke="#000000" transform="rotate(-90 -9.030926704406712,234.23220825195315) matrix(5.422114308783015,0,0,3.1833193427971804,-1018.1544105487626,-302.7229145320852) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="101" id="svg_7" y="203.673446" x="172.081657" stroke-width="0" fill="#fff">.</text>
+ </g>
+</svg>
