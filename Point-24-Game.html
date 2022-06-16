@@ -243,7 +243,7 @@
 
     
         <meta property="article:published_time" content="Thu Jun 09 2022 11:06:24 GMT+0800">
-        <meta property="article:modified_time" content="Thu Jun 09 2022 12:23:03 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jun 16 2022 13:11:11 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -266,7 +266,7 @@
     "mainEntityOfPage": "https://kcsj.i-nmb.cn/Point-24-Game.html",
     "headline": "【实例2】24点游戏",
     "datePublished": "Thu Jun 09 2022 11:06:24 GMT+0800",
-    "dateModified": "Thu Jun 09 2022 12:23:03 GMT+0800",
+    "dateModified": "Thu Jun 16 2022 13:11:11 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "i囡漫笔",
@@ -350,7 +350,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8F%8F%E8%BF%B0%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.</span> <span class="post-toc-text">描述问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95"><span class="post-toc-number">2.</span> <span class="post-toc-text">解决问题方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="post-toc-number">3.</span> <span class="post-toc-text">解决方案</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8F%8F%E8%BF%B0%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.</span> <span class="post-toc-text">描述问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95"><span class="post-toc-number">2.</span> <span class="post-toc-text">解决问题方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="post-toc-number">3.</span> <span class="post-toc-text">解决方案</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AD%96%E7%95%A5"><span class="post-toc-number">4.</span> <span class="post-toc-text">策略</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95"><span class="post-toc-number">5.</span> <span class="post-toc-text">算法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="post-toc-number">6.</span> <span class="post-toc-text">操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#step"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">step</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#n%E4%B8%AA%E6%95%B0%E4%B8%AD%E5%8F%96%E5%87%BA%E4%B8%A4%E4%B8%AA%E6%95%B0"><span class="post-toc-number">6.1.1.</span> <span class="post-toc-text">n个数中取出两个数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#n%E4%B8%AA%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BAn-1"><span class="post-toc-number">6.1.2.</span> <span class="post-toc-text">n个数转换为n-1</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%B0%86n-2%E4%B8%AA%E6%95%B0%E5%8A%A0%E5%85%A5%E5%88%B0%E5%AD%90%E8%8A%82%E7%82%B9"><span class="post-toc-number">6.1.3.</span> <span class="post-toc-text">将n-2个数加入到子节点</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="post-toc-number">7.</span> <span class="post-toc-text">完整代码</span></a></li></ol>
     </ul>
     
 
@@ -511,7 +511,289 @@
 <p>四个数里面取两个数，六种取法：</p>
 <p>3，7，9，10四个数</p>
 <p>取两个数：3,7 	3,9 	3,10	 7,9	 7,10	 9,10</p>
-<p>我们单拿<code>3,7</code>来看，</p>
+<p>我们单拿<code>3,7</code>来看，结果为<code>10,-4,4,21，(不能整除)</code></p>
+<p>由两个数可以算出4~5种可能：<code>10,9,10</code>；<code>-4,9,10</code> ； <code>4,9,10</code>；<code>21,9,10</code>，不能整除。</p>
+<p>四个变成三个数一共有24<del>30（6 * 4</del>6 * 5）种可能。【6为四个数抽出两个数的可能性】</p>
+<p>…………以此类推…………</p>
+<p>4个变为1个数，一共有1152~2250种变法【(C_4^2<em>4</em>C_3^2<em>4</em>C_2^2*4&#x3D;1152】</p>
+<p>然后我们从这些数中寻找24，并且将其溯源，寻找他的运算符号以及从哪些数变化而来</p>
+<p>到此，我们的基本流程几乎了解，也就是说我们对于这个问题的策略基本上可以掌握</p>
+<blockquote>
+<p>算法策略和算法是有区别的,它们是算法设计中的两个方面，算法策略是面向问题的,算法是面向实现的；但二者又是不可分的,首先是通过算法策略才找出解决问题的算法，其次对于用不同算法求解的问题算法策略是自然不同的。</p>
+</blockquote>
+<h2 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h2><p>我们发现，这种流程颠覆了我们正常游戏的思维。它是用最基本的加减乘除操作，因为我们发现，不管4个数是如何变化，运算的时候都是抽取两个数进行计算。并且最多计算三轮，第一轮4个数变成3个数，第二轮3个数变成2个数，第三轮2个数变成1个数。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>我们由上可以找到一个<strong>动态数据结构</strong>去配合实现，我们发现，在上述流程中，四个数转三个数，将会生成多个数（4~5种可能），然后在每一种可能中又包含多种可能，这种<strong>连续一对多</strong>的情况下，我们不由的想到一种数据结构——<strong>树</strong></p>
+<p>从<code>策略</code>可知，我们计算了三轮，所以很容易判断树的高度为4，并且这个高度为4的树的叶子结点最多为2250个、最少有1152个。</p>
+<blockquote>
+<p>分析问题的过程中可能有一系列的回答或者决策。</p>
+<p>所以这个数习惯上把它叫做分析树，也有时候把它叫做决策树</p>
+<p>他实际上和计算机与人类在做围棋博弈的时候的那个思维方法是一样的，所以他也叫博弈树</p>
+<p><strong>（分析树是动态的）</strong></p>
+</blockquote>
+<p>所以此类问题我们可以使用树来进行存储记录</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>每个叶子结点都拥有一个int型的数据，而这些数据需要用一个int型容器进行存放，而最方便的int型容器是<code>vector</code></p>
+<pre><code class="c++">struct element&#123;
+    int number;
+    std::string trace;//string即为字符串
+&#125;;
+
+
+struct NODE&#123;
+    std::vector&lt;element&gt; data;
+    std::vector&lt;NODE&gt; children;//子节点 
+&#125; ana_tree;
+//定义分析（analyse）树；ADT抽象数据类型 vector&lt;NODE&gt;（类似于递归结构） 
+</code></pre>
+<p>对于分析树的根节点来说，里面拥有四个整数；而对于叶子结点来说，每个结点只有一个整数。</p>
+<blockquote>
+<p>抽象数据类型（Abstract Data Type，ADT）是将数据对象、数据对象之间的关系和数据对象的基本操作封装在一起的一种表达方式，它和工程中的应用是一致的。</p>
+<p>在工程项目中，开始编程之前，首先列出程序需要完成的功能任务，先不用管具体怎么实现，实现细节在项目后期完成，一开始只是抽象出有哪些基本操作。把这些操作项封装为抽象数据类型，等待后面具体实现这些操作。而其他对象如果想调用这些操作，只需要按照规定好的参数接口调用，并不需要知道具体是怎么实现的，从而实现了数据封装和信息隐藏。</p>
+<p>在 C++ 中可以用类的声明表示抽象数据类型，用类的实现来实现抽象数据类型的具体操作。</p>
+<p><img src="https://img1.i-nmb.cn/img/1-20040912553LU.gif" alt="ADT三元素示意图"></p>
+<p>抽象数据类型可以用以下的三元组来表示：</p>
+<p>ADT抽象数据类型名{<br>  数据对象：&lt;数据对象的定义&gt;<br>  数据关系：&lt;数据关系的定义&gt;<br>  基本操作：&lt;基本操作的定义&gt;<br>} ADT抽象数据类型名、</p>
+<p>引用于：<a target="_blank" rel="noopener" href="http://c.biancheng.net/view/7526.html">抽象数据类型（ADT）是什么？ (biancheng.net)</a></p>
+</blockquote>
+<p>定义好树之后，我们开始在main函数中初始化，先给ana_tree中存放两个值</p>
+<pre><code class="c++">int main()&#123;
+    ana_tree.data = &#123;3,6&#125;;
+    step(ana_tree);
+    for(auto child:ana_tree.children)&#123;
+        for(auto num:child.data)&#123;
+            printf(&quot;%d&quot;,num);
+        &#125;
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<h3 id="step"><a href="#step" class="headerlink" title="step"></a>step</h3><p>其中step中的需要的操作为：n个数中取出两个，然后这两个和剩下的哪些没有取出的数变成4~5个子节点。</p>
+<h4 id="n个数中取出两个数"><a href="#n个数中取出两个数" class="headerlink" title="n个数中取出两个数"></a>n个数中取出两个数</h4><p>实现代码如下</p>
+<pre><code class="c++">void step(NODE&amp; tree)&#123;
+    for(auto i=tree.data.begin();i!=tree.data.end();++i)&#123;
+        for(auto j=i+1;j!=tree.data.end();++j)
+    &#125;
+&#125;//类似于冒泡排序循环
+</code></pre>
+<h4 id="n个数转换为n-1"><a href="#n个数转换为n-1" class="headerlink" title="n个数转换为n-1"></a>n个数转换为n-1</h4><p>在前文介绍中，我们推断2个数合成1个数一共有4~5种可能，那么我们设定每个非叶子节点有5个子节点（如下代码中<code>t1,t2,t3,t4,t5;</code>）并且使用<code>.data.push_back</code>将加减乘除的得数赋予<code>t1,t2,t3,t4,t5;</code>，其次使用<code>tree.children.push_back</code>将<code>t1,t2,t3,t4,t5;</code>作为孩子结点，其中，在进行除法（<code>t5</code>）时需要进行<strong>判断除数是否为0以及是否能够整除</strong></p>
+<pre><code class="C++">void step(NODE&amp; tree)&#123;
+    for(auto i=tree.data.begin();i!=tree.data.end();++i)&#123;
+        for(auto j=i+1;j!=tree.data.end();++j)&#123;
+            NODE t1,t2,t3,t4,t5;//孩子结点 
+            int x=*i,y=*j;
+            t1.data.push_back(x+y); 
+            t2.data.push_back(x-y); 
+            t3.data.push_back(y-x); 
+            t4.data.push_back(x*y); 
+            tree.children.push_back(t1);
+            tree.children.push_back(t2);
+            tree.children.push_back(t3);
+            tree.children.push_back(t4);
+            
+            
+            if(x&amp;&amp;y/*排除0*/)
+                if(x%y==0)&#123;
+                    t5.data.push_back(x/y); 
+                    tree.children.push_back(t5);
+                &#125;
+                    
+                else if(y%x==0)&#123;
+                    t5.data.push_back(y/x); 
+                    tree.children.push_back(t5);
+                &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>此时我们的<code>main</code>函数中只在根节点中存放了两个数，为了验证step函数是否正确，我们需要一个输出</p>
+<pre><code class="c++">int main()&#123;
+    ana_tree.data = &#123;3,7&#125;;
+    step(ana_tree);
+    for(auto child:ana_tree.children)&#123;
+        for(auto num:child.data)&#123;
+            printf(&quot;%d\t&quot;,num);
+        &#125;
+        printf(&quot;\n&quot;);
+    &#125;
+    return 0;
+&#125; 
+</code></pre>
+<blockquote>
+<p>child就是每个子节点，num是子节点中所有的数；然后把每个子节点的数进行输出</p>
+</blockquote>
+<h4 id="将n-2个数加入到子节点"><a href="#将n-2个数加入到子节点" class="headerlink" title="将n-2个数加入到子节点"></a>将n-2个数加入到子节点</h4><p>此时我们的程序可以计算2个数，但是我们还剩下了n-2（设最初有n个数）个数还没有放入子节点，此时这个n是个变量（我们在编写程序的时候没有确定n的个数），所以我们需要加入一个<code>for(auto k=tree.data.begin();k!=tree.data.end();++k)</code>循环，其中<code>if(k==i||k==j) continue;</code>去除i,j,将剩下的存入t1-t5；</p>
+<p>将x记为i的数值，y记为j的数值<code>int x=i-&gt;number,y=j-&gt;number;</code></p>
+<p>然后在t1~t5中储入格式为<code>&#123;x+y,make_trace(i,&quot;+&quot;,j)&#125;</code>来记录加减乘除的符号方便溯源</p>
+<pre><code class="c++">void step(NODE&amp; tree)&#123;
+    for(auto i=tree.data.begin();i!=tree.data.end();++i)&#123;
+        for(auto j=i+1;j!=tree.data.end();++j)&#123;
+            NODE t1,t2,t3,t4,t5;//孩子结点 
+            for(auto k=tree.data.begin();k!=tree.data.end();++k)&#123;
+                if(k==i||k==j) continue;
+                t1.data.push_back(*k); 
+                t2.data.push_back(*k); 
+                t3.data.push_back(*k); 
+                t4.data.push_back(*k);
+                t5.data.push_back(*k);
+            &#125;
+            
+            int x=i-&gt;number,y=j-&gt;number;
+            t1.data.push_back(&#123;x+y,make_trace(i,&quot;+&quot;,j)&#125;); 
+            t2.data.push_back(&#123;x-y,make_trace(i,&quot;-&quot;,j)&#125;); 
+            t3.data.push_back(&#123;y-x,make_trace(j,&quot;-&quot;,i)&#125;); 
+            t4.data.push_back(&#123;x*y,make_trace(i,&quot;*&quot;,j)&#125;); 			
+            
+            tree.children.push_back(t1);
+            tree.children.push_back(t2);
+            tree.children.push_back(t3);
+            tree.children.push_back(t4);
+            
+            if(x&amp;&amp;y/*排除0*/)
+                if(x%y==0)&#123;
+                    t5.data.push_back(&#123;x/y,make_trace(i,&quot;/&quot;,j)&#125;); 
+                    tree.children.push_back(t5);
+                &#125;
+                    
+                else if(y%x==0)&#123;
+                    t5.data.push_back(&#123;y/x,make_trace(j,&quot;/&quot;,i)&#125;); 
+                    tree.children.push_back(t5);
+                &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>在<code>main</code>函数中</p>
+<pre><code class="c++">int main()&#123;
+    printf(&quot;请输入四个数：&quot;); 
+    for(int i = 0;i&lt;4;++i)&#123;
+        int n;
+        scanf(&quot;%d&quot;,&amp;n);
+        ana_tree.data.push_back(&#123;n,std::to_string(n)&#125;);
+    &#125;
+    
+    step(ana_tree);
+    for(NODE&amp; child2: ana_tree.children)&#123;
+        step(child2);
+    &#125;
+    for(NODE&amp; child2: ana_tree.children)&#123;
+        for(NODE&amp; child3: child2.children)&#123;
+            step(child3);
+        &#125;
+    &#125;
+    
+    
+    
+    int count=0,j=0;
+    for(auto child2:ana_tree.children)&#123;
+        for(auto child3:child2.children)&#123;
+            for(auto child4:child3.children)&#123;
+                if(child4.data.begin()-&gt;number!=24) continue;
+                printf(&quot;第%d组解法：%s\n&quot;,++count,child4.data.begin()-&gt;trace.c_str());
+            &#125;
+        &#125;
+    &#125;
+        if(count==0)&#123;
+            printf(&quot;无解\n&quot;); 
+        &#125;
+        
+    return 0;
+&#125; 
+</code></pre>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="c++">#include&lt;stdio.h&gt;
+#include&lt;vector&gt;
+#include&lt;string&gt;
+
+struct element&#123;
+    int number;
+    std::string trace;
+&#125;;
+
+
+struct NODE&#123;
+    std::vector&lt;element&gt; data;
+    std::vector&lt;NODE&gt; children;
+&#125; ana_tree;
+
+std::string make_trace(	std::vector&lt;element&gt;::iterator i,std::string op,std::vector&lt;element&gt;::iterator j)&#123;
+    
+    return &quot;(&quot;+i-&gt;trace+&quot;+&quot;+j-&gt;trace+&quot;)&quot;;
+&#125;
+
+void step(NODE&amp; tree)&#123;
+    for(auto i=tree.data.begin();i!=tree.data.end();++i)&#123;
+        for(auto j=i+1;j!=tree.data.end();++j)&#123;
+            NODE t1,t2,t3,t4,t5;
+            for(auto k=tree.data.begin();k!=tree.data.end();++k)&#123;
+                if(k==i||k==j) continue;
+                t1.data.push_back(*k); 
+                t2.data.push_back(*k); 
+                t3.data.push_back(*k); 
+                t4.data.push_back(*k);
+                t5.data.push_back(*k);
+                
+            &#125;
+            int x=i-&gt;number,y=j-&gt;number;
+            t1.data.push_back(&#123;x+y,make_trace(i,&quot;+&quot;,j)&#125;); 
+            t2.data.push_back(&#123;x-y,make_trace(i,&quot;-&quot;,j)&#125;); 
+            t3.data.push_back(&#123;y-x,make_trace(j,&quot;-&quot;,i)&#125;); 
+            t4.data.push_back(&#123;x*y,make_trace(i,&quot;*&quot;,j)&#125;); 			
+            
+
+            tree.children.push_back(t1);
+            tree.children.push_back(t2);
+            tree.children.push_back(t3);
+            tree.children.push_back(t4);
+            
+            
+            if(x&amp;&amp;y/*排除0*/)
+                if(x%y==0)&#123;
+                    t5.data.push_back(&#123;x/y,make_trace(i,&quot;/&quot;,j)&#125;); 
+                    tree.children.push_back(t5);
+                &#125;
+                    
+                else if(y%x==0)&#123;
+                    t5.data.push_back(&#123;y/x,make_trace(j,&quot;/&quot;,i)&#125;); 
+                    tree.children.push_back(t5);
+                &#125;
+        &#125;
+    &#125;
+&#125;
+
+int main()&#123;
+    printf(&quot;请输入四个数：&quot;); 
+    for(int i = 0;i&lt;4;++i)&#123;
+        int n;
+        scanf(&quot;%d&quot;,&amp;n);
+        ana_tree.data.push_back(&#123;n,std::to_string(n)&#125;);
+    &#125;
+    
+    step(ana_tree);
+    for(NODE&amp; child2: ana_tree.children)&#123;
+        step(child2);
+    &#125;
+    for(NODE&amp; child2: ana_tree.children)&#123;
+        for(NODE&amp; child3: child2.children)&#123;
+            step(child3);
+        &#125;
+    &#125;
+    
+    
+    
+    int count=0,j=0;
+    for(auto child2:ana_tree.children)&#123;
+        for(auto child3:child2.children)&#123;
+            for(auto child4:child3.children)&#123;
+                if(child4.data.begin()-&gt;number!=24) continue;
+                printf(&quot;第%d组解法：%s\n&quot;,++count,child4.data.begin()-&gt;trace.c_str());
+            &#125;
+        &#125;
+    &#125;
+        if(count==0)&#123;
+            printf(&quot;无解\n&quot;); 
+        &#125;
+        
+    return 0;
+&#125; 
+</code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
